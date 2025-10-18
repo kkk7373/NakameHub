@@ -1,4 +1,5 @@
 import DiscoverImage from "./DiscoverImage";
+import pic from "../assets/community.jpg";
 const Discover = () => {
   return (
     <section className="discover-section">
@@ -9,7 +10,7 @@ const Discover = () => {
             <DiscoverImage />
           </div>
           <div className="discover-image">
-            <img src="./src/assets/community.jpg" alt="Latest Activities" />
+            <img src={pic} alt="Latest Activities" />
           </div>
         </div>
       </div>
