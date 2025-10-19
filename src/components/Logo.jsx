@@ -1,10 +1,12 @@
 import logoImage from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
-  const handleLogoClick = () => {
-    window.location.href = "/";
-  };
+  const navigate = useNavigate();
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   return (
     <div className="logo-container" onClick={handleLogoClick}>
       <img src={logoImage} alt="Nakame Hub Logo" className="logo-image" />
