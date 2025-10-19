@@ -1,0 +1,34 @@
+const Events = [
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "サンプルイベント",
+    description: "これはサンプルイベントの説明です。",
+  },
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "第二のイベント",
+    description: "これは第二のイベントの説明です。",
+  },
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "第三のイベント",
+    description: "これは第三のイベントの説明です。",
+  },
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "第四のイベント",
+    description: "これは第四のイベントの説明です。",
+  },
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "第五のイベント",
+    description: "これは第五のイベントの説明です。",
+  },
+  {
+    src: "https://thumb.photo-ac.com/68/68f288fa25d27c214e856564a1a5850a_t.jpeg",
+    title: "第六のイベント",
+    description: "これは第六のイベントの説明です。",
+  },
+];
+
+export default Events;
