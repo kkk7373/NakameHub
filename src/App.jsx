@@ -1,40 +1,21 @@
-import { useEffect, useState } from "react";
 import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
-import Text from "./components/Text.jsx";
-import List from "./components/List.jsx";
-import { useSelector } from "react-redux";
-import Discover from "./components/Discover.jsx";
+import Home from "./Home.jsx";
 import Footer from "./components/Footer.jsx";
+import Event from "./Event.jsx";
+import Login from "./Login.jsx";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  const [contentState, setContentState] = useState(null);
-  const langState = useSelector((state) => state.language.value);
-  useEffect(() => {
-    const loadContent = async () => {
-      if (langState === "Eng") {
-        const module = await import("./data/EngContent.js");
-        setContentState(module.default);
-      } else {
-        const module = await import("./data/JapContent.js");
-        setContentState(module.default);
-      }
-    };
-    loadContent();
-  }, [langState]);
-  if (!contentState) return <div>Loading content...</div>;
-
   return (
-    <>
+    <Router>
       <Header />
-      <Hero />
-      <Text items={contentState.intro} />
-      <List items={contentState.features} listType="numbered" />
-      <Text items={contentState.target} />
-      <List items={contentState.Events} listType="Bullet" />
-      <Discover />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Event />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
